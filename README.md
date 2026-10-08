@@ -1,16 +1,37 @@
-# React + Vite
+# 💱 Currency Converter App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A responsive, modern, and lightweight real-time currency converter built with **React** and **Tailwind CSS**. It fetches dynamic exchange rates using custom hooks and provides a clean user interface to convert amounts between world currencies.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## ✨ Features
 
-## React Compiler
+- **Real-Time Exchange Rates:** Dynamic conversion rates fetched from the Open Exchange Rates API.
+- **Custom React Hook (`useCurrencyInfo`):** Reusable data-fetching logic with standard state management.
+- **Reusable Input Component (`InputBox`):** Modular and accessible UI component for selecting currencies and entering numerical values.
+- **Swap Functionality:** Instantly switch between "From" and "To" currencies and swap amounts.
+- **Responsive Layout:** Tailored with Tailwind CSS for seamless viewing on desktop, tablet, and mobile devices.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 🛠️ Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **Frontend Library:** [React.js](https://react.dev/)
+- **Styling:** [Tailwind CSS](https://tailwindcss.com/)
+- **Build Tool:** [Vite](https://vitejs.dev/)
+- **API Endpoint:** [Open Exchange Rates API](https://open.er-api.com/)
+
+---
+
+## 📂 Project Structure
+
+```text
+src/
+├── components/
+│   ├── InputBox.jsx     # Reusable component for currency inputs
+│   └── index.js        # Centralized component export
+├── hooks/
+│   └── useCurrencyInfo.js # Custom hook to fetch currency exchange rates
+├── App.css
+├── App.jsx             # Main application container
+└── main.jsx            # React root DOM renderer
